@@ -1,0 +1,294 @@
+body.custom-background
+{
+	background-repeat: repeat-x;
+	background-color: #c1c1c1;
+}
+
+body.custom-background .wrapper {
+    margin:  0.5px auto 0 auto;
+}
+
+body.custom-background #header {
+    border-radius: 0px 0px 0 0;
+}
+
+#main 
+{
+	width:100%; 
+}
+#header
+{	
+
+	background-color: #435579;
+    background-image: url('https://languagelab.humanities.ucla.edu/wp-content/uploads/2017/12/newbanner3.png');
+} 
+ 
+.top-menu {
+	border-radius: 0px;
+	width:100%;
+	border-bottom: #ffb300 5px solid;
+	border-top: white 3px solid;
+}
+
+.top-menu a:hover {
+	color: black; 
+} 
+
+.social_share 
+{
+	display:none;
+}
+.maxwidth{
+	max-width: 100%;
+	margin-top: 12px;
+}
+
+ol, ul 
+{
+    font-family: "Myriad", Arial, Helvetica;
+    font-weight: bold;
+	font-size: 110%;
+}
+
+#menu-item-59
+{
+	width: 16.3%; 
+	border-style: sold; 
+	border-right-width: thick; 
+	border-right-color: white; 
+}
+
+#menu-item-59 * 
+{ 
+	background: #BD1300;
+	text-transform: uppercase; 
+}
+
+#menu-item-59 a:hover {
+	color: black; 
+} 
+
+#menu-item-60 
+{
+	width: 19%;
+}
+
+#menu-item-60 * 
+{
+	background: #75a021; 
+	text-transform: uppercase; 
+} 
+
+#menu-item-60 a:hover {
+	color: black; 
+} 
+
+#menu-item-61
+{
+	width: 20%;
+}
+
+#menu-item-61 *
+{	
+	background: #207708; 
+	text-transform: uppercase; 
+} 
+
+#menu-item-61 a:hover {
+	color: black; 
+} 
+
+#menu-item-62
+{
+	background: #4c6bad; 
+	width: 23%;
+	text-transform: uppercase; 
+}
+
+#menu-item-63
+{
+	width: 20%;
+}
+
+#menu-item-63 *
+{
+	background: #C16015;
+	text-transform: uppercase;  
+} 
+
+#menu-item-63 a:hover {
+	color: black; 
+} 
+#footer { 
+	width: 100%; 
+	background-color: #0f1626; 
+	border-top-width: 5px; 
+	color: #faf6d0; 
+	border-top-style: solid;
+	border-top-color: rgb(255, 179, 0); 
+	padding: 0px 0px 0px 0px; 
+	font-size: 11px; 
+	font-family: Arial, Helvetica, sans-	serif; 
+	padding-bottom: 12px; 
+}
+
+.copyright-text
+{
+	border-right: 3px dotted white; 
+	border-width: thin;
+	padding-right: 10px; 
+}
+
+.copyright-email
+{
+	padding: 0px 10px 0px 10px; 
+}
+
+img[src*="https://languagelab.humanities.ucla.edu/wp-content/uploads/2017/10/cropped-cropped-cropped-logo.png"] 
+{
+	position: absolute; 
+	top: -15px; 
+}
+#footer a 
+{ 
+	color: #faf6d0;
+	font-weight: bold;  
+	text-decoration: none; 
+} 
+
+.copyright-phone
+{
+	border-left: 3px dotted white; 
+	border-width: thin;
+	padding-left: 10px; 
+} 
+
+#footer-content 
+{
+	font-weight: bold;
+	text-align: center;   
+} 
+
+.header-menu
+{
+	background-color: rgb(255, 179, 0); 
+	width: 18.5%; 
+	text-decoration: none; 
+	font-size: 13px; 
+	height: 23px;
+	float: right;
+	position: absolute; 
+	top: 10px;
+	right: -40px;  
+} 
+
+.header-menu *
+{
+	color: white; 
+} 
+
+#menu-item-429
+{
+	display: inline;
+	color: white;  
+}
+
+#menu-item-425
+{
+	display: inline;
+    border-right: 3px dotted white; 
+	border-width: thin; 
+	padding-right: 5px; 
+} 
+
+#menu-item-672
+{
+	border-left: 3px dotted white; 
+	border-width: thin; 
+	padding-left: 5px; 
+	display: inline; 
+}  
+
+a
+{
+	color: #5B7EA8; 
+	text-decoration: none; 
+} 
+
+a:hover 
+{ 
+	color: black; 
+} 
+
+a::after
+{
+   content: none;
+}
+
+.leading-0 img
+{
+   background-image: url('https://languagelab.humanities.ucla.edu/wp-content/uploads/2018/01/frame310w.png');
+}
+
+.border-horizontal
+{
+background-image: url('https://languagelab.humanities.ucla.edu/wp-content/uploads/2018/01/frame310w.png');
+background-size: 300px; 
+} 
+
+.border-horizontal-small
+{
+background-image: url('https://languagelab.humanities.ucla.edu/wp-content/uploads/2018/01/frame310w.png');
+background-size: 280px; 
+} 
+
+.border-vertical
+{
+background-image: url('https://languagelab.humanities.ucla.edu/wp-content/uploads/2018/01/frame310h.png');
+background-size: 245px; 
+}
+
+
+@media only screen and (max-width: 1185px)
+{
+	#content {width:96%;}
+	.blog-name img {width: 350px;}
+	.topnav {display: none;}
+body.custom-background{background-image: none; background-color: #435579;}
+} 
+
+@media only screen and (max-width: 1025px)
+{
+	.blog-name img {width: 200px;margin-top: -20px;}
+	.header-menu {display: none;}
+}
+
+@media only screen and (max-width: 793px)
+{
+	#header {background-image: none;}
+	.blog-name img {position: absolute; right: 50%; left: 30%;}
+	#content{margin-right:20px;}
+}
+
+@media only screen and (max-width: 500px)
+{
+	img.alignleft{float:none; display:block;}
+	img.alignright{float:none; display:block;}
+	#content {width: 93%;}
+}
+@media only screen and (max-width: 417px)
+{
+	.blog-name img {left:21%;}
+	#content{width: 332px; padding-left: 8px; padding-right: 20px;}
+}
+
+@media only screen
+{
+	#content {padding-left: 20px;}
+} 
+
+#content {margin-right: 15px;} 
+
+.participate_part1 {clear:both;} 
+
+.participate_part2 {clear:both;}
