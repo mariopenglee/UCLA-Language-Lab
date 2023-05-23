@@ -1,24 +1,18 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import './style.css';
+import navbar from './components/navbar.js';
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+document.addEventListener('DOMContentLoaded', () => {
+  // Append the navbar to the document
+  document.body.prepend(navbar);
 
-setupCounter(document.querySelector('#counter'))
+  // Select the container element to display the welcome text
+  const container = document.querySelector('#app');
+
+  // Create and display the welcome text
+  const welcomeText = document.createElement('h1');
+  welcomeText.textContent = 'Language Acquisition Lab';
+  container.appendChild(welcomeText);
+
+  // Your code goes here
+
+});
