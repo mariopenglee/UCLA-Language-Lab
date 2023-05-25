@@ -1,0 +1,87 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+
+  h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+    color: #155172;
+  }
+
+  h2 {
+    font-size: 2.5em;
+    line-height: 1.1;
+    color: #155172;
+  }
+  
+  section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+  }
+  
+  /* Add specific styles for each section */
+  #home {
+    width: 100%;
+    /* Styles for the home section */
+  }
+
+  #home .bg-image {
+    position: relative;
+    z-index: 0;
+    background-image: url(../images/UCLA.png);
+    width: 100%;
+    height: 100vh;
+    -webkit-filter: blur(7.5px) opacity(0.3);
+    -moz-filter: blur(7.5px) opacity(0.3);
+    -o-filter: blur(7.5px) opacity(0.3);
+    -ms-filter: blur(7.5px) opacity(0.3);
+    filter: blur(7.5px) opacity(0.3);
+    background-position: center;
+  }
+
+  #home .content {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    width: 70%;
+  }
+
+  #home .content .lab-name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+  }
+
+  #home .content .lab-name .ucla-logo {
+    height: 3.2em;
+    border-radius: 15px;
+  }
+
+  #home .content .flavor-text {
+    font-weight: 600;
+    width: 65%;
+    color: black;
+  }
+
+  #about {
+    /* Styles for the about section */
+  }
+  
+  #services {
+    /* Styles for the services section */
+  }
+  
+  /* Add more section styles as needed */
+  
