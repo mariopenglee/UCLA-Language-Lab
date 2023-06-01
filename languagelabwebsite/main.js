@@ -1,6 +1,7 @@
 import './style.css';
 import navbar from './components/navbar.js';
 import main from './components/landing.js';
+import { gsap } from 'gsap';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Append the navbar to the document
@@ -11,4 +12,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Append the main content to the document
   document.body.append(main);
+
 });
