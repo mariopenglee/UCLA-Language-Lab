@@ -48,12 +48,31 @@ header ul li a {
 }
 
 header ul li a:hover {
-    color: #155172;
+    background-color: #2774AE;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
     font-size: 1.1em;
 }
 
 header a.logo:hover {
     filter: drop-shadow(0 0 1em gold);
+    scale : 1.1;
+}
+
+
+header ul li a.active {
+    background-color: #2774AE;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.1em;
+  }
+
+header a.logo.active {
+    scale: 1.1;
+    filter: drop-shadow(0 0 1em gold);
+    background-color: none;
 }
 
 @media only screen and (min-width: 100px) {

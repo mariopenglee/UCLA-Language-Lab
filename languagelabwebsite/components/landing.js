@@ -21,7 +21,8 @@ main.innerHTML = `
             </div>
         </div>
         <div class="flavor-text">
-            <p>We are interested in studying how infants tune into their native language(s) and how children eventually develop the implicit rules of language that allow them to comprehend and produce grammatical sentences. To do this we study infants’, toddlers’, and young children’s language perception and production abilities.
+            <p>
+            Here at the UCLA Language Acquisition Lab, we are continuously trying to discover new aspects of how infants and toddlers acquire language. Our studies include observing how children react to certain sound and language patterns, telling us more about what language processes they have or have not already acquired. We hope to determine how children develop the implicit rules of language that allow them to understand and express ideas through grammatical sentences. Our goal is to further solve the complexity of language acquisition while providing families with a great experience participating at our lab!
             </p>
         </div>
         <a href="#participate" class="button">
@@ -29,8 +30,6 @@ main.innerHTML = `
         </a>
         </div>
     </div>
-    
-
   </section>
 
   <section id="research">
@@ -70,19 +69,113 @@ main.innerHTML = `
           </div>
           <a class="button" id="read-more">
             Read More
-          </a>    
+          </a>
+        <div class="row3">
+          <div class="publications">
+            <h2>Publications</h2>
+            <div class="publication-item">
+              <h3>Infants’ sensitivity to phonotactic patterns in novel words</h3>
+              <p>By: J. Graf Estes, J. Gluckman, &amp; M. Endress</p>
+              <p>Published in <i>Infancy</i> (2016)</p>
+            </div>
+            <div class="publication-item">
+              <h3>Infants’ sensitivity to phonotactic patterns in novel words</h3>
+              <p>By: J. Graf Estes, J. Gluckman, &amp; M. Endress</p>
+              <p>Published in <i>Infancy</i> (2016)</p>
+            </div>
+            <a class="button" id="full-list-publications">
+              Full List of Publications
+            </a>
+          </div>
+          <div class="presentations">
+            <h2>Presentations</h2>
+            <div class="presentation-item">
+              <h3>Infants’ sensitivity to phonotactic patterns in novel words</h3>
+              <p>By: J. Graf Estes, J. Gluckman, &amp; M. Endress</p>
+              <p>Presented at the 2016 Biennial Meeting of the Society for Research in Child Development</p>
+            </div>
+            <a class="button" id="full-list-presentations">
+              Full List of Presentations
+            </a>
+          </div>
         </div>
-
-
-          
   </section>
 
   <section id="participate">
-    <h1>Participate</h1>
+    <div class="rowcontainer">
+      <div class="row1">
+        <div class="left">
+          <h1>Participate</h1>
+          <p>
+            Our research is made possible by the participation of families in the community. We are always looking for families with children between the ages of 6 months to 6 years to participate in our studies. 
+            If you are interested in participating,
+            please contact us at <a href="mailto:uclalanguagelab@gmail.com"> uclalanguagelab@gmail.com </a> or call us at <a href="tel:323-364-8845"> (323) 364-8845 </a>, if we don’t pick up, please leave us a voicemail and our team will get back to you as soon as possible.
+            We look forward to hearing from you!
+          </p>
+        </div>
+        <div class="right">
+          <!-- put the call and email buttons here -->
+          <a class="button" id="call">
+            📞 Call
+          </a>
+          <a class="button" id="email">
+            ✉️ Email
+          </a>
+        </div>
+      </div>
+      <div class="row2">
+        <div class=step-item>
+          <h2>Step 1: Arrival</h2>
+          <p> 
+          Upon your arrival, one of our friendly lab members will help you park in our dedicated parking spot in Parking Lot 5, and walk you to our lab.
+          </p>
+        </div>
+        <div class=step-item>
+          <h2>Step 2: Consent</h2>
+          <p>
+          Once you arrive at our lab, we will ask you to read and sign a consent form. This form will explain the purpose of our research and what your participation will entail.
+          </p>
+        </div>
+        <div class=step-item>
+          <h2>Step 3: Play</h2>
+          <p>
+          After you sign the consent form, we will take you to our playroom where your child will play with one of our friendly lab members. During this time, you are welcome to stay in the playroom and watch your child play, or you can wait in our waiting room.
+          </p>
+        </div>
+        <div class=step-item>
+          <h2>Step 4: Prize!</h2>
+          <p>
+          After your child finishes playing, we will give them a prize for participating in our study. We will also give you a parking validation ticket so you can park for free in Parking Lot 5.
+          </p>
+        </div>
+      </div>
   </section>
 
   <section id="team">
-    <h1>Team</h1>
+    <div class="rowcontainer">
+      <div class="row1">
+        <h1>Our Team</h1>
+        <p>
+          Our lab is made up of a diverse group of researchers, including undergraduate students, graduate students, and postdoctoral scholars. We are all passionate about language development and are excited to share our research with you!
+        </p>
+      </div>
+      <div class="row2">
+        <h2>Principal Investigators</h2>
+        <div class="member-card">
+          <img src="images/estes.jpg" alt="Dr. Megha Sundara">
+          <h3>Dr. Megha Sundara</h3>
+          <h4>Director of the Language Acquisition Lab</h4>
+        </div>
+        <div class="member-card">
+          <img src="images/endress.jpg" alt="Dr. Laurel Perkins">
+          <h3>Dr. Laurel Perkins</h3>
+        </div>
+        <div class="member-card">
+          <img src="images/endress.jpg" alt="Dr. Nina Hyams">
+          <h3>Dr. Nina Hyams</h3>
+        </div>
+        
+
   </section>
 
   <section id="join">
@@ -102,104 +195,75 @@ window.addEventListener('scroll', function() {
 });
 
 
+// Make the intro text fade in as soon as the page loads
+const content = main.querySelector('.content');
+
+gsap.from(content, {
+  opacity: 0,
+  duration: 1,
+  delay: 0.5,
+  scale: 0.5,
+});
+
+
+
+
+
+
 const methods = main.querySelector('.methods');
 const methoditems = methods.querySelectorAll('.method-item');
 
 
-// create a timeline for each item, the items fly in from the right and fly out to the left. 
-// Make sure the item is pinned in the center of the screen while it is visible
-methoditems.forEach((item) => {
-  if (item === methoditems[0]) {
-    // for the first element only animate the exit animation
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: item,
-        start: 'center center',
-        end: 'bottom center',
-        scrub: 0.2, // Adjust the scroll speed as desired
-        pin: true,
-        pinSpacing: true, // Disable automatic adjustment of pin spacing
-        markers: true,
-        toggleActions: 'restart none none none',
-      }
-      });
-    tl.to(item, { x: '-100vw', duration: 1, scale: 0.5 });
-  }
-  else if (item === methoditems[methoditems.length - 1]) {
-    // for the last element only animate the entry animation
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: item,
-        start: 'center center',
-        end: 'bottom center',
-        scrub: 0.2, // Adjust the scroll speed as desired
-        pin: true,
-        pinSpacing: true, // Disable automatic adjustment of pin spacing
-        markers: true,
-        toggleActions: 'restart none none none',
-      }
-      });
-    tl.from(item, { x: '100vw', duration: 1, scale: 0.5 });
-  }
-  else
-  {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: item,
-        // start the animation when the center of the item reaches the center of the screen
-        start: 'center center',
-        // end the animation after scrolling the height of the viewport (center to center)
-        end: 'bottom center',
-        scrub: 0.1, // Adjust the scroll speed as desired
-        pin: true,
-        pinSpacing: false, // Disable automatic adjustment of pin spacing
-        markers: true,
-        toggleActions: 'restart none none none',
-        onUpdate: (self) => {
-          if (self.direction === -1) {
-            gsap.set(item, { scale: 1.5 });
-          }
-  
-          if (self.direction === 1) {
-            gsap.set(item, { scale: 1 });
-          }
-  
-        },
-      },
-    });
-    tl.from(item, { x: '100vw', duration: 1, scale: 0.5 });
-    tl.to(item, { x: '-100vw', duration: 1, scale: 0.5 });
-  }
-  
-
-  
-});
-
-// scale the read more button once it's at the center of the screen
-const readmore = main.querySelector('#read-more');
-
-gsap.to(readmore, {
+// methods fly in from the right
+gsap.from(methoditems, {
   scrollTrigger: {
-    trigger: readmore,
-    start: 'center center',
-    // end after scrolling 500px beyond the start
-    end: '+=500',
-    scrub: 0.2, // Adjust the scroll speed as desired
-    pin: true,
-    pinSpacing: true, // Disable automatic adjustment of pin spacing
-    markers: true,
+    trigger: methods,
+    scrub: true,
+    start: 'top 80%',
+    end: 'bottom 80%',
     toggleActions: 'restart none none none',
-    onEnter: () => gsap.set(readmore, { scale: 1.5 }), // Set the scale to 1.5 when entering the trigger
-    onComplete: () => gsap.set(readmore, { scale: 1.5 }), // Set the scale to 1.5 when the animation completes
   },
-  scale: 1.5,
+  x: 100,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.5,
 });
 
+// publications fly in from the left
+const publications = main.querySelector('.publications');
+const publicationitems = publications.querySelectorAll('.publication-item');
 
+gsap.from(publicationitems, {
+  scrollTrigger: {
+    trigger: publications,
+    scrub: true,
+    start: 'top 80%',
+    end: 'bottom 80%',
+    toggleActions: 'restart none none none',
+  },
+  x: -100,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.5,
+});
 
+// presentations fly in from the right
+const presentations = main.querySelector('.presentations');
+const presentationitems = presentations.querySelectorAll('.presentation-item');
 
-
-
+gsap.from(presentationitems, {
+  scrollTrigger: {
+    trigger: presentations,
+    scrub: true,
+    start: 'top 80%',
+    end: 'bottom 80%',
+    toggleActions: 'restart none none none',
+  },
+  x: 100,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.5,
+});
 
 
 

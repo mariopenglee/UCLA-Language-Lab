@@ -33,5 +33,23 @@ window.addEventListener('scroll', function() {
   }
 });
 
+// do smooth scrolling when clicking on links
+links.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const href = link.getAttribute('href');
+    const offsetTop = document.querySelector(href).offsetTop;
+    scroll({
+      top: offsetTop,
+      behavior: 'smooth',
+    });
+  });
+});
+
+
+
+
+
+
 // Export the navbar for importing in other files
 export default navbar;
