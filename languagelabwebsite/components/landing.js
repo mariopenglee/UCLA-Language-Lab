@@ -157,6 +157,23 @@ main.innerHTML = `
           </p>
         </div>
       </div>
+      <div class="row3">
+        <div class="left">
+          <h2>Schedule a Visit</h2>
+          <p>
+            If you are interested in participating in our studies, please contact us at <a href="mailto:
+          </p>
+        </div>
+        <div class="right">
+          <a class="button" id="call">
+            📞 Call
+          </a>
+          <a class="button" id="email">
+            ✉️ Email
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="team">
@@ -328,7 +345,7 @@ gsap.from(airplane, {
     start: 'top 80%',
     end: 'bottom 80%',
     markers: true,
-    toggleActions: 'restart none reverse none',
+    toggleActions: 'restart none none none',
   },
   opacity: 0,
   duration: 1,
@@ -377,8 +394,11 @@ gsap.from(stepitems, {
 });
 
 // hovering on a setp item makes it pop
+var originalScale = 1;
 stepitems.forEach(function(item) {
+  
   item.addEventListener('mouseenter', function() {
+    originalScale = gsap.getProperty(item, 'scale');
     gsap.to(item, {
       duration: 0.1,
       scale: 1.1,
@@ -389,7 +409,7 @@ stepitems.forEach(function(item) {
   item.addEventListener('mouseleave', function() {
     gsap.to(item, {
       duration: 0.1,
-      scale: 1,
+      scale: originalScale,
       ease: 'power1.inOut',
     });
   });
