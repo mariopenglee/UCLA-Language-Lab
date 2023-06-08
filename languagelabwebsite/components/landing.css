@@ -203,7 +203,8 @@ html, body {
     background-size: cover;
     display: flex;
     min-height: 0;
-    height: 300vh;
+    height: 250vh;
+    
   }
 
   #participate .rowcontainer {
@@ -212,7 +213,6 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
     gap: 100px;
     top: 100px;
     z-index: 0;
@@ -263,41 +263,50 @@ html, body {
   #participate .rowcontainer .row2 {
     width: 100%;
     height: auto;
+    /* make items align to the left*/
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
-    gap: 40px;
+    gap: 100px;
   }
 
   #participate .rowcontainer .row2 .step-item {
-    width: 100%;
+    width: 40%;
     height: auto;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    gap: 40px;
-  }
-  #participate .rowcontainer .row2 .step-item h2 {
-    width: 50%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    gap: 40px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-self: flex-start;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,0.9) 100%);
+    text-align: justify;
+    padding: 20px;
+    border-radius: 20px;
   }
 
-  #participate .rowcontainer .row2 .step-item p {
-    width: 70%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    gap: 40px;
+  #participate .rowcontainer .row2 .step-item:nth-child(odd) {
+    align-items: flex-start;
+    align-self: flex-start;
   }
+
+  #participate .rowcontainer .row2 .step-item:nth-child(even) {
+    align-items: flex-end;
+    align-self: flex-end;
+  }
+
+  #participate .rowcontainer .row2 .ball {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    z-index: -1;
+  }
+
+
+
 
   #team .rowcontainer {
     position: relative;
@@ -326,6 +335,17 @@ html, body {
 
   #team .rowcontainer .member-card {
     width: 20%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+  }
+
+  #team .rowcontainer .member-card .member-card-front {
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;

@@ -5,8 +5,14 @@ import '../style.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
+
+
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+gsap.registerPlugin(MotionPathPlugin);
+
+
 
 const main = document.createElement('main');
 main.innerHTML = `
@@ -124,6 +130,8 @@ main.innerHTML = `
         </div>
       </div>
       <div class="row2">
+        <div class="ball">
+        </div>
         <div class=step-item>
           <h2>Step 1: Arrival</h2>
           <p> 
@@ -162,17 +170,23 @@ main.innerHTML = `
       <div class="row2">
         <h2>Principal Investigators</h2>
         <div class="member-card">
-          <img src="images/estes.jpg" alt="Dr. Megha Sundara">
-          <h3>Dr. Megha Sundara</h3>
-          <h4>Director of the Language Acquisition Lab</h4>
+          <div class="member-card-front">
+            <img src="https://placehold.co/600x400" alt="Dr. Megha Sundara">
+            <h3>Dr. Megha Sundara</h3>
+            <h4>Director of the Language Acquisition Lab</h4>
+          </div>
         </div>
         <div class="member-card">
-          <img src="images/endress.jpg" alt="Dr. Laurel Perkins">
-          <h3>Dr. Laurel Perkins</h3>
+          <div class="member-card-front">
+            <img src="https://placehold.co/600x400" alt="Dr. Laurel Perkins">
+            <h3>Dr. Laurel Perkins</h3>
+          </div>
         </div>
         <div class="member-card">
-          <img src="images/endress.jpg" alt="Dr. Nina Hyams">
-          <h3>Dr. Nina Hyams</h3>
+          <div class="member-card-front">
+            <img src="https://placehold.co/600x400" alt="Dr. Nina Hyams">
+            <h3>Dr. Nina Hyams</h3>
+          </div>
         </div>
         
 
@@ -204,11 +218,6 @@ gsap.from(content, {
   delay: 0.5,
   scale: 0.5,
 });
-
-
-
-
-
 
 const methods = main.querySelector('.methods');
 const methoditems = methods.querySelectorAll('.method-item');
@@ -264,6 +273,128 @@ gsap.from(presentationitems, {
   duration: 1,
   stagger: 0.5,
 });
+
+
+// participate section
+// wiggle call and email buttons
+const participate = main.querySelector('#participate');
+const call = participate.querySelector('#call');
+const email = participate.querySelector('#email');
+
+
+call.addEventListener('mouseenter', function() {
+  gsap.to(call, {
+    duration: 0.1,
+    rotation: 5,
+    ease: 'power1.inOut',
+  });
+});
+
+email.addEventListener('mouseenter', function() {
+  gsap.to(email, {
+    duration: 0.1,
+    rotation: 5,
+    ease: 'power1.inOut',
+  });
+});
+
+call.addEventListener('mouseleave', function() {
+  gsap.to(call, {
+    duration: 0.1,
+    rotation: 0,
+    ease: 'power1.inOut',
+  });
+});
+
+email.addEventListener('mouseleave', function() {
+  gsap.to(email, {
+    duration: 0.1,
+    rotation: 0,
+    ease: 'power1.inOut',
+  });
+});
+
+
+
+// airplane flies from step to step using motion path
+const stepitems = main.querySelectorAll('.step-item');
+const airplane = main.querySelector('.ball');
+const pariticpate_row2 = main.querySelector('#participate .row2');
+
+// animate the airplane so it flies in
+gsap.from(airplane, {
+  scrollTrigger: {
+    trigger: airplane,
+    start: 'top 80%',
+    end: 'bottom 80%',
+    markers: true,
+    toggleActions: 'restart none reverse none',
+  },
+  opacity: 0,
+  duration: 1,
+  scale: 1.5,
+  ease: 'power1.inOut',
+});
+
+
+// go from step to step
+
+gsap.to(airplane, {
+  scrollTrigger: {
+    trigger: pariticpate_row2,
+    scrub: true,
+    start: 'top 50%',
+    end: 'bottom 80%',
+    markers: true,
+    toggleActions: 'restart none none none',
+  },
+  motionPath: {
+    path: [
+      {x: 200, y: 100},
+      {x: -200, y: 500},
+      {x: 200, y: 800},
+      {x: -200, y: 1100},
+    ],
+  },
+  duration: 4,
+  ease: 'power1.inOut',
+});
+
+// animate each step item, pop and fade in
+gsap.from(stepitems, {
+  scrollTrigger: {
+    trigger: pariticpate_row2,
+    scrub: true,
+    start: 'top 50%',
+    end: 'bottom 80%',
+    markers: true,
+    toggleActions: 'restart none none none',
+  },
+  scale: 0.5,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.5,
+});
+
+// hovering on a setp item makes it pop
+stepitems.forEach(function(item) {
+  item.addEventListener('mouseenter', function() {
+    gsap.to(item, {
+      duration: 0.1,
+      scale: 1.1,
+      ease: 'power1.inOut',
+    });
+  });
+
+  item.addEventListener('mouseleave', function() {
+    gsap.to(item, {
+      duration: 0.1,
+      scale: 1,
+      ease: 'power1.inOut',
+    });
+  });
+});
+
 
 
 
