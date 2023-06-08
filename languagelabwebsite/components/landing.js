@@ -108,34 +108,32 @@ main.innerHTML = `
   </section>
 
   <section id="participate">
+    
     <div class="rowcontainer">
       <div class="row1">
         <div class="left">
           <h1>Participate</h1>
           <p>
-            Our research is made possible by the participation of families in the community. We are always looking for families with children between the ages of 6 months to 6 years to participate in our studies. 
-            If you are interested in participating,
-            please contact us at <a href="mailto:uclalanguagelab@gmail.com"> uclalanguagelab@gmail.com </a> or call us at <a href="tel:323-364-8845"> (323) 364-8845 </a>, if we don’t pick up, please leave us a voicemail and our team will get back to you as soon as possible.
-            We look forward to hearing from you!
+            Our research is made possible by the participation of families in the community. 
+            <br>
+            Eligibility: We are looking for children between the ages of 6 months to 6 years to participate in our studies.
           </p>
         </div>
         <div class="right">
-          <!-- put the call and email buttons here -->
-          <a class="button" id="call">
-            📞 Call
-          </a>
-          <a class="button" id="email">
-            ✉️ Email
-          </a>
+          <h2> Location </h2>
+          <p> 
+            Our lab is located in the Linguistics Department at UCLA in Westwood, Los Angeles. More detailed information about parking, transportation, and how to get here will be provided when you schedule a visit.
+          </p>
         </div>
       </div>
       <div class="row2">
+      
         <div class="ball">
         </div>
         <div class=step-item>
           <h2>Step 1: Arrival</h2>
           <p> 
-          Upon your arrival, one of our friendly lab members will help you park in our dedicated parking spot in Parking Lot 5, and walk you to our lab.
+          Upon parking, please call us at <a href="tel:323-364-8845"> (323) 364-8845 </a> and one of our lab members will meet you at the parking lot and walk you to our lab.
           </p>
         </div>
         <div class=step-item>
@@ -157,11 +155,12 @@ main.innerHTML = `
           </p>
         </div>
       </div>
-      <div class="row3">
+      <div class="row1">
         <div class="left">
-          <h2>Schedule a Visit</h2>
+          <h2>Sign Up for a Study</h2>
           <p>
-            If you are interested in participating in our studies, please contact us at <a href="mailto:
+          If you are interested in participating, please contact us at <a href="mailto:uclalanguagelab@gmail.com"> uclalanguagelab@gmail.com </a> or call us at <a href="tel:323-364-8845"> (323) 364-8845 </a>, if we don’t pick up, please leave us a voicemail and our team will get back to you as soon as possible.
+          We look forward to hearing from you!
           </p>
         </div>
         <div class="right">
@@ -206,7 +205,6 @@ main.innerHTML = `
           </div>
         </div>
         
-
   </section>
 
   <section id="join">

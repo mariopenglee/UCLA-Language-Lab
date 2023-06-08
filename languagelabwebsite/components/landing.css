@@ -269,6 +269,7 @@ html, body {
     justify-content: flex-start;
     align-items: center;
     gap: 100px;
+    pad: 0 10%;
   }
 
   #participate .rowcontainer .row2 .step-item {
