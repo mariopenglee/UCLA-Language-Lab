@@ -116,7 +116,7 @@ main.innerHTML = `
           <p>
             Our research is made possible by the participation of families in the community. 
             <br>
-            Eligibility: We are looking for children between the ages of 6 months to 6 years to participate in our studies.
+            Eligibility: We are looking for children between the ages of 4 months to 28 months to participate in our studies.
           </p>
         </div>
         <div class="right">
