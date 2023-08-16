@@ -126,8 +126,8 @@ main.innerHTML = `
           </p>
         </div>
       </div>
+     
       <div class="row2">
-      
         <div class="ball">
         </div>
         <div class=step-item>
@@ -155,7 +155,7 @@ main.innerHTML = `
           </p>
         </div>
       </div>
-      <div class="row1">
+      <div class="row3">
         <div class="left">
           <h2>Sign Up for a Study</h2>
           <p>
@@ -343,11 +343,10 @@ gsap.from(airplane, {
     start: 'top 80%',
     end: 'bottom 80%',
     markers: true,
-    toggleActions: 'restart none none none',
+    toggleActions: 'restart none reverse none',
   },
   opacity: 0,
   duration: 1,
-  scale: 1.5,
   ease: 'power1.inOut',
 });
 
@@ -365,10 +364,10 @@ gsap.to(airplane, {
   },
   motionPath: {
     path: [
-      {x: 200, y: 100},
-      {x: -200, y: 500},
-      {x: 200, y: 800},
-      {x: -200, y: 1100},
+      {x: 200, y: 100, scale: 1.2, rotate: 180},
+      {x: -200, y: 500, scale: 1.4, rotate: 360},
+      {x: 200, y: 800, scale: 1.6, rotate: 540},
+      {x: -200, y: 1100,  scale: 1.8, rotate: 720},
     ],
   },
   duration: 4,

@@ -270,6 +270,8 @@ html, body {
     align-items: center;
     gap: 100px;
     pad: 0 10%;
+    border-radius: 20px;
+    z-index: 0;
   }
 
   #participate .rowcontainer .row2 .step-item {
@@ -280,12 +282,12 @@ html, body {
     justify-content: flex-start;
     align-items: flex-start;
     align-self: flex-start;
-    background: rgb(34,193,195);
-    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,0.9) 100%);
+    background: white;
     text-align: justify;
+    border: 1px solid #000;
     padding: 20px;
-    border-radius: 20px;
   }
+
 
   #participate .rowcontainer .row2 .step-item:nth-child(odd) {
     align-items: flex-start;
@@ -300,13 +302,43 @@ html, body {
   #participate .rowcontainer .row2 .ball {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
-    background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     z-index: -1;
-  }
+    background-image: url(../images/leaf.png);
+    background-size: cover;
+    }
+  
+  #participate .rowcontainer .row3{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10% 0;
+    gap: 40px;
+    background-color: #f5f5f5;
+    }
 
-
+    #participate .rowcontainer .row3 .left {
+      width: 40%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+  
+    #participate .rowcontainer .row3 .right {
+      width: 40%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+  
 
 
   #team .rowcontainer {
