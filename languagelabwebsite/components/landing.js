@@ -1,13 +1,11 @@
 // this is the landing page for the website
 // it is the first page that the user sees when they visit the website
 import './landing.css';
-import '../style.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
-
-
+import principal_investigators from '../data/principal_investigators.json';
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 gsap.registerPlugin(MotionPathPlugin);
@@ -15,6 +13,9 @@ gsap.registerPlugin(MotionPathPlugin);
 
 
 const main = document.createElement('main');
+
+
+
 main.innerHTML = `
   <section id="home">
     <div class="bg-image"></div>
@@ -183,27 +184,10 @@ main.innerHTML = `
           Our lab is made up of a diverse group of researchers, including undergraduate students, graduate students, and postdoctoral scholars. We are all passionate about language development and are excited to share our research with you!
         </p>
       </div>
+      <h2>Principal Investigators</h2>
       <div class="row2">
-        <h2>Principal Investigators</h2>
-        <div class="member-card">
-          <div class="member-card-front">
-            <img src="https://placehold.co/600x400" alt="Dr. Megha Sundara">
-            <h3>Dr. Megha Sundara</h3>
-            <h4>Director of the Language Acquisition Lab</h4>
-          </div>
-        </div>
-        <div class="member-card">
-          <div class="member-card-front">
-            <img src="https://placehold.co/600x400" alt="Dr. Laurel Perkins">
-            <h3>Dr. Laurel Perkins</h3>
-          </div>
-        </div>
-        <div class="member-card">
-          <div class="member-card-front">
-            <img src="https://placehold.co/600x400" alt="Dr. Nina Hyams">
-            <h3>Dr. Nina Hyams</h3>
-          </div>
-        </div>
+      </div>
+    </div>
         
   </section>
 
@@ -215,6 +199,33 @@ main.innerHTML = `
 
   <!-- Include JavaScript file -->
 `;
+
+// Add the principal investigators to the page
+const team = main.querySelector('#team');
+const row2 = team.querySelector('.row2');
+
+principal_investigators.forEach(function(investigator) {
+  const card = document.createElement('div');
+  card.classList.add('card');
+  card.innerHTML = `
+    <div class="investigator">
+      <div class="portrait">
+        <img src=${investigator.image} alt=${investigator.name} class="image">
+      </div>
+      <div class="info">
+        <h3>${investigator.name}</h3>
+        <p>${investigator.title}</p>
+        <ul>
+          ${investigator.education.map(education => `<li>${education}</li>`).join('')}
+        </ul>
+        <a href=${investigator.website} class="button">Learn More</a>
+      </div>
+    </div>
+  `;
+  row2.append(card);
+});
+
+
 
 // Add parallax scrolling effect
 window.addEventListener('scroll', function() {

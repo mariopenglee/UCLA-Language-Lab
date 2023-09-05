@@ -1,0 +1,37 @@
+[
+    {
+      "name": "Dr. Megha Sundara",
+      "image": "../data/sundara.jpeg",
+      "title": "Director of the Language Acquisition Lab",
+      "education": [
+        "B.Sc. (Speech Pathology & Audiology), All India Institute of Speech and Hearing",
+        "M.Sc. (Speech Pathology & Audiology), All India Institute of Speech and Hearing",
+        "Ph.D. (Communication Sciences & Disorders) McGill University"
+      ],
+      "website": "https://www.linguistics.ucla.edu/people/sundara/"
+    },
+    {
+      "name": "Dr. Laurel Perkins",
+      "image": "../data/perkins.png",
+      "title": "Director of the Language Acquisition Lab",
+      "education": [
+        "B.Sc. (Speech Pathology & Audiology), All India Institute of Speech and Hearing",
+        "M.Sc. (Speech Pathology & Audiology), All India Institute of Speech and Hearing",
+        "Ph.D. (Communication Sciences & Disorders) McGill University"
+      ],
+      "website": "https://www.linguistics.ucla.edu/people/perkins/"
+
+    },
+    {
+      "name": "Dr. Nina Hyams",
+      "image": "../data/hyams.jpeg",
+      "title": "Director of the Language Acquisition Lab",
+      "education": [
+        "B.Sc. (Speech Pathology & Audiology), All India Institute of Speech and Hearing",
+        "M.Sc. (Speech Pathology & Audiology), All India Institute of Speech and Hearing",
+        "Ph.D. (Communication Sciences & Disorders) McGill University"
+      ],
+    "website": "https://www.linguistics.ucla.edu/people/hyams/"
+    }
+  ]
+  
