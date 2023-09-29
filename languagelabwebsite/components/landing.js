@@ -5,7 +5,9 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
-import principal_investigators from '../data/principal_investigators.json';
+import principal_investigators from '../data/principal_investigators/info.json';
+import graduate_students from '../data/graduate_students/info.json';
+import undergraduate_students from '../data/undergrads/info.json';
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 gsap.registerPlugin(MotionPathPlugin);
@@ -187,6 +189,18 @@ main.innerHTML = `
       <h2>Principal Investigators</h2>
       <div class="row2">
       </div>
+
+      <h2>Graduate Students</h2>
+      <div class="row3">
+      </div>
+
+      <h2>Undergraduate Students</h2>
+      <div class="row4">
+        <div class="tab-control">
+        </div>
+        <div class="tab-content">
+        </div>
+      </div>
     </div>
         
   </section>
@@ -203,7 +217,9 @@ main.innerHTML = `
 // Add the principal investigators to the page
 const team = main.querySelector('#team');
 const row2 = team.querySelector('.row2');
+const row3 = team.querySelector('.row3');
 
+// Add the principal investigators to the page
 principal_investigators.forEach(function(investigator) {
   const card = document.createElement('div');
   card.classList.add('card');
@@ -211,6 +227,7 @@ principal_investigators.forEach(function(investigator) {
     <div class="investigator">
       <div class="portrait">
         <img src=${investigator.image} alt=${investigator.name} class="image">
+        
       </div>
       <div class="info">
         <h3>${investigator.name}</h3>
@@ -219,11 +236,161 @@ principal_investigators.forEach(function(investigator) {
           ${investigator.education.map(education => `<li>${education}</li>`).join('')}
         </ul>
         <a href=${investigator.website} class="button">Learn More</a>
+       
       </div>
     </div>
   `;
   row2.append(card);
 });
+
+const investigators = row2.querySelectorAll('.investigator');
+
+gsap.from(investigators, {
+  scrollTrigger: {
+    trigger: row2,
+    scrub: true,
+    start: 'top 80%',
+    end: 'bottom 80%',
+    toggleActions: 'restart none none none',
+  },
+  x: -100,
+  opacity: 0,
+  duration: 1,
+  stagger: 0.5,
+});
+
+// hovering on an investigator makes it pop
+investigators.forEach(function(investigator) {
+
+  investigator.addEventListener('mouseenter', function() {
+
+    gsap.to(investigator, {
+      duration: 0.1,
+      scale: 1.2,
+      ease: 'power1.inOut',
+    });
+  });
+
+  investigator.addEventListener('mouseleave', function() {
+    gsap.to(investigator, {
+      duration: 0.1,
+      scale: 1,
+      ease: 'power1.inOut',
+    });
+  });
+});
+
+
+// Add the graduate students to the page
+graduate_students.forEach(function(student) {
+  const card = document.createElement('div');
+  card.classList.add('card');
+  card.innerHTML = `
+    <div class="student">
+      <div class="card--front">
+        <img src=${student.image} alt=${student.name} class="image">
+      </div>
+      <div class="card--hover">
+        <p>${student.description}</p>
+      </div>
+      <div class="info--front">
+        <h3>${student.name}</h3>
+      </div>
+      <div class="info--hover">
+        <a href=${student.website}>
+          <h3>Click to Learn More</h3>
+        </a>
+      </div>
+      
+    </div>
+  `;
+  row3.append(card);
+});
+
+// Make the cards pop and slightly rotate when hovering
+const students = row3.querySelectorAll('.student');
+students.forEach(function(student) {
+  student.addEventListener('mouseenter', function() {
+    gsap.to(student, {
+      duration: 0.5,
+      scale: 1.1,
+      rotation: -3,
+      ease: 'power1.inOut',
+    });
+  });
+
+  student.addEventListener('mouseleave', function() {
+    gsap.to(student, {
+      duration: 0.5,
+      scale: 1,
+      rotation: 0,
+      ease: 'power1.inOut',
+    });
+  });
+
+});
+
+
+// Add the undergraduate students to the page
+const row4 = team.querySelector('.row4');
+const tabcontrol = row4.querySelector('.tab-control');
+const tabContent = row4.querySelector('.tab-content');
+undergraduate_students.forEach(function(student) {
+  const tab = document.createElement('div');
+
+  tab.classList.add('tab');
+  tab.innerHTML = `
+    <input type="radio" name="tabs" id=${student.name} class="tab-input">
+    <label for=${student.name} class="tab-label">
+    <h3>${student.name}</h3>
+    </label>
+  `;
+
+  tabcontrol.append(tab);
+
+  const tabContentItem = document.createElement('div');
+  tabContentItem.classList.add('tab-content-item');
+  tabContentItem.setAttribute('id', student.name);
+
+
+  tabContentItem.innerHTML = `
+    <div class="portrait">
+      <img src=${student.image} alt=${student.name} class="image">
+    </div>
+    <div class="info">
+      <h3>${student.name}</h3>
+      <p>${student.description}</p>
+    </div>
+  `;
+  tabContent.append(tabContentItem);
+
+  // Attach a click event listener to the tab input
+  const tabInput = tab.querySelector('.tab-input');
+  tabInput.addEventListener('click', () => {
+    // Hide all tab content items
+    const allTabContentItems = tabContent.querySelectorAll('.tab-content-item');
+    allTabContentItems.forEach(item => {
+      item.style.display = 'none';
+    });
+
+    // Show the corresponding tab content
+    tabContentItem.style.display = 'block';
+  });
+
+});
+
+// Initially, display the first tab content
+const firstTabContentItem = tabContent.querySelector('.tab-content-item');
+if (firstTabContentItem) {
+  firstTabContentItem.style.display = 'block';
+}
+
+
+
+
+
+
+
 
 
 

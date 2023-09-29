@@ -1,7 +1,7 @@
 [
     {
       "name": "Dr. Megha Sundara",
-      "image": "../data/sundara.jpeg",
+      "image": "../data/principal_investigators/sundara.jpeg",
       "title": "Director of the Language Acquisition Lab",
       "education": [
         "B.Sc. (Speech Pathology & Audiology), All India Institute of Speech and Hearing",
@@ -12,8 +12,8 @@
     },
     {
       "name": "Dr. Laurel Perkins",
-      "image": "../data/perkins.png",
-      "title": "Director of the Language Acquisition Lab",
+      "image": "../data/principal_investigators/perkins.png",
+      "title": "",
       "education": [
         "B.Sc. (Speech Pathology & Audiology), All India Institute of Speech and Hearing",
         "M.Sc. (Speech Pathology & Audiology), All India Institute of Speech and Hearing",
@@ -24,8 +24,8 @@
     },
     {
       "name": "Dr. Nina Hyams",
-      "image": "../data/hyams.jpeg",
-      "title": "Director of the Language Acquisition Lab",
+      "image": "../data/principal_investigators/hyams.jpeg",
+      "title": "",
       "education": [
         "B.Sc. (Speech Pathology & Audiology), All India Institute of Speech and Hearing",
         "M.Sc. (Speech Pathology & Audiology), All India Institute of Speech and Hearing",

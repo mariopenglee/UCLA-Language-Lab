@@ -200,24 +200,23 @@ html, body {
   
   #participate {
     width: 100%;
-    background-size: cover;
     display: flex;
-    min-height: 0;
-    height: 250vh;
+    
+    height: 270vh;
     
   }
 
   #participate .rowcontainer {
     position: relative;
-    padding: 0 10%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 100px;
+    align-items: center;
     top: 100px;
     z-index: 0;
     width: 100%;
     height: 100vh;
+
   }
 
   #participate .rowcontainer .row1 {
@@ -228,6 +227,7 @@ html, body {
     justify-content: space-evenly;
     align-items: center;
     gap: 40px;
+    padding-bottom: 10%;
   }
 
   #participate .rowcontainer .row1 .left {
@@ -263,15 +263,19 @@ html, body {
   #participate .rowcontainer .row2 {
     width: 100%;
     height: auto;
+
     /* make items align to the left*/
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     gap: 100px;
-    pad: 0 10%;
     border-radius: 20px;
+    padding: 0% 10%;
+    padding-bottom: 10%;
     z-index: 0;
+    background-image: url(../images/section_participate.png);
+    background-size: cover;
   }
 
   #participate .rowcontainer .row2 .step-item {
@@ -309,14 +313,15 @@ html, body {
   
   #participate .rowcontainer .row3{
     width: 100%;
-    height: auto;
+    flex: 1;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     padding: 10% 0;
     gap: 40px;
-    background-color: #f5f5f5;
+    background-color: wheat;
     }
 
     #participate .rowcontainer .row3 .left {
@@ -339,11 +344,20 @@ html, body {
       gap: 40px;
     }
   
+  
+  #team {
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    min-height: 0;
+    height: fit-content;
+    
+  }
 
 
   #team .rowcontainer {
     position: relative;
-    padding: 0 10%;
+    padding: 10% 10%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -352,7 +366,6 @@ html, body {
     top: 100px;
     z-index: 0;
     width: 100%;
-    height: 100vh;
     background-color: #f5f5f5;
   }
 
@@ -360,7 +373,7 @@ html, body {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     gap: 40px;
@@ -370,30 +383,183 @@ html, body {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    overflow: scroll;
     gap: 40px;
   }
 
   #team .rowcontainer .investigator {
-   
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 40px;
     transition: all 0.3s ease-in-out;
-  }
+    border: #000 solid 2px;
+    border-radius: 10px;
+    .portrait {
+      display: flex;
+      flex-direction: column;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 50%;
+      justify-content: center;
+      align-items: flex-start;
+  
+    }
+    .button {
+      font-size: small;
+      width: fit-content;
+    }
+    .image {
+      width: 200px;
+    }
+    &:hover {
+      border-color: #155172;
+      border-width: 3px;
+    }
 
-  #team .rowcontainer .investigator .image {
+  }
+ 
+  #team .rowcontainer .row3 {
     width: 100%;
     height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
   }
 
 
 
+  #team .rowcontainer .row3 .student {
+    display: block;
+    transition: 0.25s ease;
+    height: 350px;
+    width: 300px;
+    overflow-y: scroll;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    
+    .card--front {
+      display: flex;
+    }
+    .card--hover {
+      display: none;
+    }
+
+    .info--front {
+      display: flex;
+    }
+    .info--hover {
+      display: none;
+    }
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &:hover {
+			border-color: #155172;
+      border-width: 3px;
+      
+    
+      .card--front {
+        display: none;
+      }
+      .card--hover {
+        display: flex;
+        text-align: left;
+        font-size: small;
+      }
+
+      .info--front {
+        display: none;
+      }
+      .info--hover {
+        display: flex;
+      }
+    }
+  }
+
+  #team .rowcontainer .row4{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 0px;
+
+    .tab-control {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+      .tab-input {
+        display: none;
+      }
+      .tab-input:checked + .tab-label {
+        background-color: #155172;
+        color: #ffffff;
+      }
+      .tab-label {
+        position: relative;
+        display: inline-block;
+        padding: 0.5em 0.75em;
+        color: #155172;
+        border: 2px solid #155172;
+        border-radius: 3px;
+        transition: 0.25s;
+        cursor: pointer;
+      
+      }
+    }
+    
+
+    .tab-content {
+      width: 70%;
+      display: block;
+
+      .image {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .tab-content-item {
+        display: none;
+        padding: 1em;
+        border: 2px solid #155172;
+        border-radius: 3px;
+        background-color: #ffffff;
+
+      }
+    }
+
+    /* show the tab content with the id that matches the checked tab input's id */
+    .tab-input:checked ~ .tab-content {
+      display: block;
+      border: 2px solid #155172;
+    }
+
+
+
+
+    
+
+  }
 
 
   /* Add more section styles as needed */

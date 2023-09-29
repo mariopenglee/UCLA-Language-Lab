@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Xitlali Zúñiga-Gross",
+    "image": "../data/graduate_students/jo.jpeg",
+    "description":
+      "I’m a fourth-year Ph.D. candidate in the linguistics department at UCLA. I’m interested in phonological learning, specifically individual differences in learning, learning biases, learnability and child-directed speech. I mainly use experimental methods to investigate these issues, which are complemented by corpus and computational work. One of my ongoing projects investigates individual differences in early speech perception and later language development. Whenever I have free time, I like to go for a walk, and/or explore coffee shops and bakeries in my neighborhood!      ",
+    "website": "https://www.linguistics.ucla.edu/people/sundara/"
+  },
+  {
+    "name": "Galilea Barrera",
+    "image": "../data/graduate_students/khlystova.jpeg",
+    "description":
+      "I am interested in how distributional information in a child’s input can inform various aspects of language acquisition — from sound category learning to how children learn to parse ambiguous sentences and beyond. I work with visual discrimination and headturn preference procedures, and have some experience with eyetracking techniques as well. I am currently working on a computational parser that can model children’s performance with temporarily ambiguous sentences, as well as a project documenting the phonetic variation in naturalistic infant-directed speech. In my free time, I enjoy hiking, cooking, baking, and doing dog agility with my Golden, Scout. ",
+    "website": "https://www.linguistics.ucla.edu/people/sundara/"
+  },
+  {
+    "name": "Yasmine Bizarro",
+    "image": "../data/graduate_students/narkar.jpeg",
+    "description":
+      "I am broadly interested in acoustic phonetics, speech perception and experimental phonology with a particular interest in learning and learnability in crowded acoustic spaces and with impoverished input. I use a combination of experimental, computational and corpus methods in my research. One collaborative project I am working on attempts to evaluate the learnability of vowels in infant directed speech using different machine learning algorithms that simulate phonetic acquisition. In my free time, I enjoy traveling, reading, and spending time with my cats, Murderface and Toki.",
+    "website": "https://www.linguistics.ucla.edu/people/sundara/"
+  },
+  {
+    "name": "Jasmine Shao",
+    "image": "../data/graduate_students/sola.jpeg",
+    "description":
+      "I am interested in the acquisition of morphology, especially with regards to how infants learn to distinguish morphological processes from phonotactic ones. In the lab, I am currently working with Megha Sundara to investigate whether the perceptual saliency of harmony patterns causes all infants, regardless of language background, to become sensitive to harmony before they gain sensitivity to other phonotactic dependencies. I also do a lot of fieldwork on San Cristóbal Lachirioag Zapotec. Outside of school, I like to read detective novels and play video games.",
+    "website": "https://www.linguistics.ucla.edu/people/sundara/"
+  },
+  {
+    "name": "Talia Wagener",
+    "image": "../data/graduate_students/wang.jpeg",
+    "description":
+      "I am a third-year graduate student in the linguistics department at UCLA. I am broadly interested in how the structural properties of natural languages, especially natural language phonology, can be represented, computed and learned. I hope to better understand these questions through different methodologies, including mathematical analyses, computational modeling and empirical studies. In the lab, in collaboration with Professor Sundara and Lily Xi Xu, we are working on a project modeling the acquisition of word classes. I also work on reduplication and copying-related phenomena. Besides linguistics, I enjoy cooking and spending time in the theatre.      ",
+    "website": "https://www.linguistics.ucla.edu/people/sundara/"
+  },
+  {
+    "name": "Iris Shi",
+    "image": "../data/graduate_students/xu.jpeg",
+    "description":
+      "I’m a second-year PhD student at the linguistics department. I use experimental and computational methods to study (morpho)phonological knowledge and how it is learned. One specific area of interest is how morphological environments affect phonology, and I think understanding how early morphological and phonotactic learning interact with each other lends important insight on this question. I am also interested in the learning and representation of non-concatenative morphology. One hobby I have is collecting stuffed animals. ",
+    "website": "https://www.linguistics.ucla.edu/people/sundara/"
+  },
+  {
+    "name": "Sophie Kehl",
+    "image": "../data/graduate_students/xu.jpeg",
+    "description":
+      "I’m a second-year PhD student at the linguistics department. I use experimental and computational methods to study (morpho)phonological knowledge and how it is learned. One specific area of interest is how morphological environments affect phonology, and I think understanding how early morphological and phonotactic learning interact with each other lends important insight on this question. I am also interested in the learning and representation of non-concatenative morphology. One hobby I have is collecting stuffed animals. ",
+    "website": "https://www.linguistics.ucla.edu/people/sundara/"
+  }
+]
