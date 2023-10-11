@@ -1,51 +1,50 @@
 [
   {
     "name": "Xitlali Zúñiga-Gross",
-    "image": "../data/graduate_students/jo.jpeg",
+    "image": "../data/undergrads/xitlali.png",
     "description":
-      "I’m a fourth-year Ph.D. candidate in the linguistics department at UCLA. I’m interested in phonological learning, specifically individual differences in learning, learning biases, learnability and child-directed speech. I mainly use experimental methods to investigate these issues, which are complemented by corpus and computational work. One of my ongoing projects investigates individual differences in early speech perception and later language development. Whenever I have free time, I like to go for a walk, and/or explore coffee shops and bakeries in my neighborhood!      ",
-    "website": "https://www.linguistics.ucla.edu/people/sundara/"
+      "I’m a 3rd-year Pre-International Development Studies Major with a minor in Linguistics. I’m from Northern California where I was raised in a bilingual household, which alongside my name, began my interest in language and culture. One of my goals is to learn many languages (I currently know or am learning five). I also enjoy reading, art, and plants."
   },
   {
     "name": "Galilea Barrera",
-    "image": "../data/graduate_students/khlystova.jpeg",
+    "image": "../data/undergrads/galilea.png",
     "description":
-      "I am interested in how distributional information in a child’s input can inform various aspects of language acquisition — from sound category learning to how children learn to parse ambiguous sentences and beyond. I work with visual discrimination and headturn preference procedures, and have some experience with eyetracking techniques as well. I am currently working on a computational parser that can model children’s performance with temporarily ambiguous sentences, as well as a project documenting the phonetic variation in naturalistic infant-directed speech. In my free time, I enjoy hiking, cooking, baking, and doing dog agility with my Golden, Scout. ",
-    "website": "https://www.linguistics.ucla.edu/people/sundara/"
+      "I am a third-year transfer undergraduate majoring in Applied Linguistics and minoring in Disability Studies. I aspire to be a speech-language pathologist with the purpose of providing high-quality care to children with developmental disabilities who come from underserved communities, like the one I am part of. I am fascinated by languages, and my own language journey has taught me that language can be the most beautiful and destructive gift given to us. Outside of academics, I love watching donghuas, and I enjoy spending quality time with my loved ones."
   },
   {
     "name": "Yasmine Bizarro",
-    "image": "../data/graduate_students/narkar.jpeg",
+    "image": "../data/undergrads/yasmine.png",
     "description":
-      "I am broadly interested in acoustic phonetics, speech perception and experimental phonology with a particular interest in learning and learnability in crowded acoustic spaces and with impoverished input. I use a combination of experimental, computational and corpus methods in my research. One collaborative project I am working on attempts to evaluate the learnability of vowels in infant directed speech using different machine learning algorithms that simulate phonetic acquisition. In my free time, I enjoy traveling, reading, and spending time with my cats, Murderface and Toki.",
-    "website": "https://www.linguistics.ucla.edu/people/sundara/"
+      "I am a second- year undergraduate student at UCLA studying Psychology and Linguistics. I hope to pursue a career as a medical Speech Language Pathologist. I am incredibly passionate about child development, and how speech can foster these young identities. Outside of school I enjoy journaling, dancing, and baking!"
   },
   {
     "name": "Jasmine Shao",
-    "image": "../data/graduate_students/sola.jpeg",
+    "image": "../data/undergrads/jasmine.png",
     "description":
-      "I am interested in the acquisition of morphology, especially with regards to how infants learn to distinguish morphological processes from phonotactic ones. In the lab, I am currently working with Megha Sundara to investigate whether the perceptual saliency of harmony patterns causes all infants, regardless of language background, to become sensitive to harmony before they gain sensitivity to other phonotactic dependencies. I also do a lot of fieldwork on San Cristóbal Lachirioag Zapotec. Outside of school, I like to read detective novels and play video games.",
-    "website": "https://www.linguistics.ucla.edu/people/sundara/"
+      "I recently graduated from UCLA with a BA in Applied Linguistics and Communication. I’m interested in research on sociolinguistics, phonology, and syntax, especially on the topics of heritage speakers, education, and internet communities. I plan to pursue graduate studies in linguistics or law. Outside of class and work, I enjoy long distance running, film and digital photography, and live music."
   },
   {
     "name": "Talia Wagener",
-    "image": "../data/graduate_students/wang.jpeg",
+    "image": "../data/undergrads/talia.png",
     "description":
-      "I am a third-year graduate student in the linguistics department at UCLA. I am broadly interested in how the structural properties of natural languages, especially natural language phonology, can be represented, computed and learned. I hope to better understand these questions through different methodologies, including mathematical analyses, computational modeling and empirical studies. In the lab, in collaboration with Professor Sundara and Lily Xi Xu, we are working on a project modeling the acquisition of word classes. I also work on reduplication and copying-related phenomena. Besides linguistics, I enjoy cooking and spending time in the theatre.      ",
-    "website": "https://www.linguistics.ucla.edu/people/sundara/"
+      "I’m a second-year at UCLA with plans to double major in Linguistics and Global Studies. I’m always curious when it comes to studying second language acquisition and bilingualism, especially as a fan of learning new languages myself! After undergraduate, I hope to pursue further education in the fields of either comparative or historical linguistics. For now though, I mostly enjoy reading, playing my cello, and seeing new countries and cultures."
   },
   {
     "name": "Iris Shi",
-    "image": "../data/graduate_students/xu.jpeg",
+    "image": "../data/undergrads/iris.png",
     "description":
-      "I’m a second-year PhD student at the linguistics department. I use experimental and computational methods to study (morpho)phonological knowledge and how it is learned. One specific area of interest is how morphological environments affect phonology, and I think understanding how early morphological and phonotactic learning interact with each other lends important insight on this question. I am also interested in the learning and representation of non-concatenative morphology. One hobby I have is collecting stuffed animals. ",
-    "website": "https://www.linguistics.ucla.edu/people/sundara/"
+      "I am a third-year double-majoring in Economics and Linguistics & Computer Science. I have a deep interest in sociolinguistics, and I strive to help improve language technologies for language learning and acquisition. Some of my hobbies include singing, collecting/reading classical Western literature, and baking (especially with my mother when I am back home). I am so thrilled to help with the projects and discoveries at the Language Lab!"
   },
   {
     "name": "Sophie Kehl",
-    "image": "../data/graduate_students/xu.jpeg",
+    "image": "../data/undergrads/sophie.png",
     "description":
-      "I’m a second-year PhD student at the linguistics department. I use experimental and computational methods to study (morpho)phonological knowledge and how it is learned. One specific area of interest is how morphological environments affect phonology, and I think understanding how early morphological and phonotactic learning interact with each other lends important insight on this question. I am also interested in the learning and representation of non-concatenative morphology. One hobby I have is collecting stuffed animals. ",
-    "website": "https://www.linguistics.ucla.edu/people/sundara/"
+      "I recently graduated from UCLA as a Linguistics major with a minor in Film, Television, and Digital Media. I enjoy studying phonology, sociolinguistics, and language acquisition. I also like dancing and video editing in my free time. I am currently pursuing further education in speech and language pathology, and hope to become a speech language pathologist in the future!"
+  },
+  {
+    "name": "Mario Peng",
+    "image": "../data/undergrads/mario.png",
+    "description":
+      "I am a fourth year double-majoring in Linguistics & Computer Science and Psychology, with a minor in Data Science Engineering. I am interested in the democratization of technology, ensuring it is accessible, useful, and beneficial to all. I am also interested in the intersection of language and technology, specifically artificial intelligence, and how we can use AI to better understand humans and vice versa. Outside of school, I enjoy martial arts, music, and surfing."
   }
 ]

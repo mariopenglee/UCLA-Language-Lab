@@ -2,22 +2,25 @@
     {
       "name": "Dr. Megha Sundara",
       "image": "../data/principal_investigators/sundara.jpeg",
-      "title": "Director of the Language Acquisition Lab",
-      "education": [
-        "B.Sc. (Speech Pathology & Audiology), All India Institute of Speech and Hearing",
-        "M.Sc. (Speech Pathology & Audiology), All India Institute of Speech and Hearing",
-        "Ph.D. (Communication Sciences & Disorders) McGill University"
+      "title": "Ph.D. (Communication Sciences & Disorders) McGill University",
+      "interests": [
+        "Morpho-phonology",
+        "Perceptual categories",
+        "Perception-Production links",
+        "Word Segmentation",
+        "Prosody"
       ],
       "website": "https://www.linguistics.ucla.edu/people/sundara/"
     },
     {
       "name": "Dr. Laurel Perkins",
       "image": "../data/principal_investigators/perkins.png",
-      "title": "",
-      "education": [
-        "B.Sc. (Speech Pathology & Audiology), All India Institute of Speech and Hearing",
-        "M.Sc. (Speech Pathology & Audiology), All India Institute of Speech and Hearing",
-        "Ph.D. (Communication Sciences & Disorders) McGill University"
+      "title": "Ph.D. (Communication Sciences & Disorders) McGill University",
+      "interests": [
+        "First language acquisition",
+        "Developmental trajectory",
+        "Syntax and Semantics acquisition",
+        "Computational cognitive modeling"
       ],
       "website": "https://www.linguistics.ucla.edu/people/perkins/"
 
@@ -25,11 +28,13 @@
     {
       "name": "Dr. Nina Hyams",
       "image": "../data/principal_investigators/hyams.jpeg",
-      "title": "",
-      "education": [
-        "B.Sc. (Speech Pathology & Audiology), All India Institute of Speech and Hearing",
-        "M.Sc. (Speech Pathology & Audiology), All India Institute of Speech and Hearing",
-        "Ph.D. (Communication Sciences & Disorders) McGill University"
+      "title": "Ph.D. (Communication Sciences & Disorders) McGill University",
+      "interests": [
+        "Syntax acquisition",
+        "Morphosyntax acquisition",
+        "Universal Grammar",
+        "Cross-linguistic comparisons"
+
       ],
     "website": "https://www.linguistics.ucla.edu/people/hyams/"
     }

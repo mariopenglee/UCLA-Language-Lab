@@ -412,7 +412,7 @@ html, body {
   
     }
     .button {
-      font-size: small;
+      font-size: medium;
       width: fit-content;
     }
     .image {
@@ -439,16 +439,18 @@ html, body {
 
 
   #team .rowcontainer .row3 .student {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     transition: 0.25s ease;
-    height: 350px;
-    width: 300px;
+    height: 25em;
+    width: 20em;
     overflow-y: scroll;
     border: 2px solid black;
     padding: 10px;
     border-radius: 10px;
-    text-align: center;
-    
+
     .card--front {
       display: flex;
     }
@@ -465,7 +467,6 @@ html, body {
 
     .image {
       width: 100%;
-      height: 100%;
       object-fit: cover;
     }
 
@@ -493,73 +494,107 @@ html, body {
   }
 
   #team .rowcontainer .row4{
-    width: 100%;
-    height: auto;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 0px;
 
-    .tab-control {
-      width: 30%;
+    .image {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .lab-manager {
       display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-end;
-      .tab-input {
-        display: none;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 2em;
+      border: #000 solid 2px;
+      border-radius: 10px;
+      transition: all 0.3s ease-in-out;
+      padding: 1em;
+
+      .button {
+        font-size: medium;
+        width: fit-content;
       }
-      .tab-input:checked + .tab-label {
-        background-color: #155172;
-        color: #ffffff;
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: flex-start;
       }
-      .tab-label {
-        position: relative;
-        display: inline-block;
-        padding: 0.5em 0.75em;
-        color: #155172;
-        border: 2px solid #155172;
-        border-radius: 3px;
-        transition: 0.25s;
-        cursor: pointer;
+    }
+  }
+
+  #team .rowcontainer .row5{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2em;
+
+
+    .student{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.25s ease;
+    height: 15em;
+    width: 15em;
+    overflow-y: scroll;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    
+
+    .card--front {
+      display: flex;
+    }
+    .card--hover {
+      display: none;
+    }
+
+    .info--front {
+      display: flex;
+    }
+    .info--hover {
+      display: none;
+    }
+
+    .image {
+      height: 10em;
+      object-fit: cover;
+    }
+
+    &:hover {
+			border-color: #155172;
+      border-width: 3px;
       
-      }
-    }
     
-
-    .tab-content {
-      width: 70%;
-      display: block;
-
-      .image {
-        width: 300px;
-        height: 300px;
-        object-fit: cover;
-      }
-
-      .tab-content-item {
+      .card--front {
         display: none;
-        padding: 1em;
-        border: 2px solid #155172;
-        border-radius: 3px;
-        background-color: #ffffff;
+      }
+      .card--hover {
+        display: flex;
+        text-align: left;
+        font-size: x-small;
+      }
 
+      .info--front {
+        display: none;
+      }
+      .info--hover {
+        display: flex;
       }
     }
-
-    /* show the tab content with the id that matches the checked tab input's id */
-    .tab-input:checked ~ .tab-content {
-      display: block;
-      border: 2px solid #155172;
-    }
-
-
-
-
-    
 
   }
+}
 
 
   /* Add more section styles as needed */

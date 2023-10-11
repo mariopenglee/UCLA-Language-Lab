@@ -8,6 +8,7 @@ import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
 import principal_investigators from '../data/principal_investigators/info.json';
 import graduate_students from '../data/graduate_students/info.json';
 import undergraduate_students from '../data/undergrads/info.json';
+import lab_manager from '../data/lab_manager/info.json';
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 gsap.registerPlugin(MotionPathPlugin);
@@ -190,16 +191,16 @@ main.innerHTML = `
       <div class="row2">
       </div>
 
+      <h2>Lab Manager</h2>
+      <div class="row4">
+      </div>
+
       <h2>Graduate Students</h2>
       <div class="row3">
       </div>
 
       <h2>Undergraduate Students</h2>
-      <div class="row4">
-        <div class="tab-control">
-        </div>
-        <div class="tab-content">
-        </div>
+      <div class="row5">
       </div>
     </div>
         
@@ -233,7 +234,7 @@ principal_investigators.forEach(function(investigator) {
         <h3>${investigator.name}</h3>
         <p>${investigator.title}</p>
         <ul>
-          ${investigator.education.map(education => `<li>${education}</li>`).join('')}
+          ${investigator.interests.map(interests => `<li>${interests}</li>`).join('')}
         </ul>
         <a href=${investigator.website} class="button">Learn More</a>
        
@@ -248,15 +249,13 @@ const investigators = row2.querySelectorAll('.investigator');
 gsap.from(investigators, {
   scrollTrigger: {
     trigger: row2,
-    scrub: true,
     start: 'top 80%',
     end: 'bottom 80%',
     toggleActions: 'restart none none none',
   },
-  x: -100,
+  y: 100,
   opacity: 0,
   duration: 1,
-  stagger: 0.5,
 });
 
 // hovering on an investigator makes it pop
@@ -266,7 +265,7 @@ investigators.forEach(function(investigator) {
 
     gsap.to(investigator, {
       duration: 0.1,
-      scale: 1.2,
+      scale: 1.1,
       ease: 'power1.inOut',
     });
   });
@@ -279,6 +278,28 @@ investigators.forEach(function(investigator) {
     });
   });
 });
+
+// Add the lab manager
+const row4 = team.querySelector('.row4');
+const card = document.createElement('div');
+card.classList.add('card');
+card.innerHTML = ` 
+<div class="lab-manager">
+<div class="portrait">
+  <img src=${lab_manager.image} alt=${lab_manager.name} class="image">
+  
+</div>
+<div class="info">
+  <h3>${lab_manager.name}</h3>
+  <ul>
+    ${lab_manager.description}
+  </ul>
+  <a href=${lab_manager.website} class="button">Learn More</a>
+ 
+</div>
+</div>
+`;
+row4.append(card);
 
 
 // Add the graduate students to the page
@@ -332,58 +353,53 @@ students.forEach(function(student) {
 
 
 // Add the undergraduate students to the page
-const row4 = team.querySelector('.row4');
-const tabcontrol = row4.querySelector('.tab-control');
-const tabContent = row4.querySelector('.tab-content');
+const row5 = team.querySelector('.row5');
 undergraduate_students.forEach(function(student) {
-  const tab = document.createElement('div');
-
-  tab.classList.add('tab');
-  tab.innerHTML = `
-    <input type="radio" name="tabs" id=${student.name} class="tab-input">
-    <label for=${student.name} class="tab-label">
-    <h3>${student.name}</h3>
-    </label>
-  `;
-
-  tabcontrol.append(tab);
-
-  const tabContentItem = document.createElement('div');
-  tabContentItem.classList.add('tab-content-item');
-  tabContentItem.setAttribute('id', student.name);
-
-
-  tabContentItem.innerHTML = `
-    <div class="portrait">
-      <img src=${student.image} alt=${student.name} class="image">
-    </div>
-    <div class="info">
-      <h3>${student.name}</h3>
-      <p>${student.description}</p>
+  const card = document.createElement('div');
+  card.classList.add('card');
+  card.innerHTML = `
+    <div class="student">
+      <div class="card--front">
+        <img src=${student.image} alt=${student.name} class="image">
+      </div>
+      <div class="card--hover">
+        <p>${student.description}</p>
+      </div>
+      <div class="info--front">
+        <h3>${student.name}</h3>
+      </div>
+      
     </div>
   `;
-  tabContent.append(tabContentItem);
+  row5.append(card);
+});
 
-  // Attach a click event listener to the tab input
-  const tabInput = tab.querySelector('.tab-input');
-  tabInput.addEventListener('click', () => {
-    // Hide all tab content items
-    const allTabContentItems = tabContent.querySelectorAll('.tab-content-item');
-    allTabContentItems.forEach(item => {
-      item.style.display = 'none';
+// Make the cards bigger when hovering
+
+const undergrads = row5.querySelectorAll('.student');
+undergrads.forEach(function(undergrad) {
+  undergrad.addEventListener('mouseenter', function() {
+    gsap.to(undergrad, {
+      duration: 0.5,
+      scale: 1.2,
+      ease: 'power1.inOut',
     });
+  });
 
-    // Show the corresponding tab content
-    tabContentItem.style.display = 'block';
+  undergrad.addEventListener('mouseleave', function() {
+    gsap.to(undergrad, {
+      duration: 0.5,
+      scale: 1,
+      ease: 'power1.inOut',
+    });
   });
 
 });
 
-// Initially, display the first tab content
-const firstTabContentItem = tabContent.querySelector('.tab-content-item');
-if (firstTabContentItem) {
-  firstTabContentItem.style.display = 'block';
-}
+
+
+
+
 
 
 
@@ -588,6 +604,40 @@ stepitems.forEach(function(item) {
       ease: 'power1.inOut',
     });
   });
+});
+
+// the call and email buttons wiggle when shown, fade in from big to small
+const callbutton = main.querySelector('#call');
+const emailbutton = main.querySelector('#email');
+
+gsap.from(callbutton, {
+  scrollTrigger: {
+    trigger: callbutton,
+    start: 'top 80%',
+    end: 'bottom 80%',
+    scrub: true,
+    toggleActions: 'restart none none none',
+  },
+  scale: 1.5,
+  rotation: 10,
+  duration: 1,
+  opacity: 0,
+  ease: 'power1.inOut',
+});
+
+gsap.from(emailbutton, {
+  scrollTrigger: {
+    trigger: emailbutton,
+    start: 'top 80%',
+    end: 'bottom 80%',
+    scrub: true,
+    toggleActions: 'restart none none none',
+  },
+  scale: 1.5,
+  rotation: 10,
+  duration: 1,
+  opacity: 0,
+  ease: 'power1.inOut',
 });
 
 
